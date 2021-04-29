@@ -20,7 +20,7 @@ export class PaisInputComponent implements OnInit {
     this.debouncer
       .pipe(debounceTime(2000))
       .subscribe(valor => {
-        console.log('debouncer:', valor);
+        this.onDebounce.emit(valor);
       })
     ;
   }
