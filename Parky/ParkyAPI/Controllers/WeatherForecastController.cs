@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using ParkyAPI.Models;
+using ParkyAPI.Repository;
+using ParkyAPI.Repository.INationalParkRepository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +14,13 @@ namespace ParkyAPI.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
+        protected readonly INationalParkRepository<NationalParkDto> _repo;
+        public WeatherForecastController(INationalParkRepository<NationalParkDto> repo)
+        {
+            this._repo = repo;
+            this._repo.
+        }
+
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
