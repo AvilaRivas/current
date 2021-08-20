@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace ParkyAPI.Data
 {
-    public class ApplicationDbContext: DbContext
+    public class ApplicationDbContext : DbContext, IApplicationDbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-
+            
         }
 
         public DbSet<NationalPark> NationalParks { get; set; }

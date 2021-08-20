@@ -14,11 +14,8 @@ namespace ParkyAPI.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        protected readonly INationalParkRepository<NationalParkDto> _repo;
-        public WeatherForecastController(INationalParkRepository<NationalParkDto> repo)
+        public WeatherForecastController()
         {
-            this._repo = repo;
-            this._repo.
         }
 
         private static readonly string[] Summaries = new[]
@@ -28,22 +25,11 @@ namespace ParkyAPI.Controllers
 
         private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
-        {
-            _logger = logger;
-        }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public void Get()
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+            
         }
     }
 }

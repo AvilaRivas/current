@@ -33,7 +33,10 @@ namespace ParkyAPI
         {
             services.AddDbContext<ApplicationDbContext>
                 (options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+            //services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+            services.AddScoped(typeof(INationalParkRepository<>), typeof(NationalParkRepository<>));
+
+
             services.AddAutoMapper(typeof(ParkyMappings));
             services.AddControllers();
         }

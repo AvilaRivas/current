@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace ParkyAPI.Repository
 {
-    public class BaseRepository<T> : IBaseRepository<T> where T : class
+    public abstract class BaseRepository<T> : IBaseRepository<T> where T : class
     {
-        protected readonly ApplicationDbContext _db;
+        protected readonly IApplicationDbContext _db;
 
-        public BaseRepository(ApplicationDbContext db)
+        public BaseRepository(IApplicationDbContext db)
         {
             _db = db;
         }
