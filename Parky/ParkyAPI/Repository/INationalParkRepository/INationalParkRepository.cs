@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ParkyAPI.Repository.INationalParkRepository
 {
-    public interface INationalParkRepository<T> : IBaseRepository<NationalPark>
+    public interface INationalParkRepository<T> : IBaseRepository<T>
     {
         bool NationalParkExist(string name);
         bool NationalParkExist(int id);

@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "1xijYIriBQphj1lL+QvQ/ZNih7OWaiLkCPpf4shAjtiSFqwxhPhhAZr005OUyRnJpoTiWXMH42u3DmKtJVYF5w==",
+  "dgSpecHash": "zm9X3HcVa2gHspdb8bPWA8iWwdcgEKOoKsKAdnehhNI8gkC+Vfs7R+q/JVppHfRsjSLVISVqfx4dvRkz06gfGA==",
   "success": true,
   "projectFilePath": "D:\\documents\\Learning\\RestFulAPI\\current\\Parky\\ParkyAPI\\ParkyAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\santo\\.nuget\\packages\\autofac\\6.2.0\\autofac.6.2.0.nupkg.sha512",
+    "C:\\Users\\santo\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.1.0\\autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",
     "C:\\Users\\santo\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\santo\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "C:\\Users\\santo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

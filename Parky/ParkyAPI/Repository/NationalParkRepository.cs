@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ParkyAPI.Repository
 {
-    public class NationalParkRepository<T> :BaseRepository<NationalPark>,  INationalParkRepository<T> where T : class
+    public class NationalParkRepository<T> :BaseRepository<T>,  INationalParkRepository<T> where T : NationalPark
     {
 
         public NationalParkRepository(ApplicationDbContext db)
@@ -20,12 +20,12 @@ namespace ParkyAPI.Repository
 
         public bool NationalParkExist(string name)
         {
-            return this._db.NationalParks.Any(x => x.Name.ToLower().Trim() == name.ToLower().Trim());
+            return this._db.Set<T>().Any(x => x.Name.ToLower().Trim() == name.ToLower().Trim());
         }
 
         public bool NationalParkExist(int id)
         {
-            return this._db.NationalParks.Any(x => x.Id == id);
+            return this._db.Set<T>().Any(x => x.Id == id);
         }
     }
 }

@@ -11,7 +11,12 @@ namespace ParkyAPI.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-            
+           
+        }
+
+        public override int SaveChanges()
+        {
+            return base.SaveChanges();
         }
 
         public DbSet<NationalPark> NationalParks { get; set; }
