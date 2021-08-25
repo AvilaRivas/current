@@ -9,7 +9,7 @@ namespace ParkyAPI.Repository.INationalParkRepository
 {
     public interface INationalParkRepository<T> : IBaseRepository<T>
     {
-        bool NationalParkExist(string name);
-        bool NationalParkExist(int id);
+        bool NationalParkExists(string name);
+        bool NationalParkExists(int id);
     }
 }

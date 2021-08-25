@@ -18,12 +18,12 @@ namespace ParkyAPI.Repository
 
         }
 
-        public bool NationalParkExist(string name)
+        public bool NationalParkExists(string name)
         {
             return this._db.Set<T>().Any(x => x.Name.ToLower().Trim() == name.ToLower().Trim());
         }
 
-        public bool NationalParkExist(int id)
+        public bool NationalParkExists(int id)
         {
             return this._db.Set<T>().Any(x => x.Id == id);
         }
