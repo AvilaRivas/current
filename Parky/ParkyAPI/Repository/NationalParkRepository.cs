@@ -1,6 +1,6 @@
 ﻿using ParkyAPI.Data;
 using ParkyAPI.Models;
-using ParkyAPI.Repository.INationalParkRepository;
+using ParkyAPI.Repository.IRepository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +12,7 @@ namespace ParkyAPI.Repository
     public class NationalParkRepository<T> :BaseRepository<T>,  INationalParkRepository<T> where T : NationalPark
     {
 
-        public NationalParkRepository(ApplicationDbContext db)
+        public NationalParkRepository(IApplicationDbContext db)
             : base(db)
         {
 

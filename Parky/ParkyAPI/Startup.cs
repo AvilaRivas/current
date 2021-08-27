@@ -13,10 +13,12 @@ using ParkyAPI.Autofac;
 using ParkyAPI.Data;
 using ParkyAPI.ParkyMapper;
 using ParkyAPI.Repository;
-using ParkyAPI.Repository.INationalParkRepository;
+using ParkyAPI.Repository.IRepository;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 
@@ -42,6 +44,30 @@ namespace ParkyAPI
 
             //Register Automapper
             services.AddAutoMapper(typeof(ParkyMappings));
+            services.AddSwaggerGen(options => 
+            {
+                options.SwaggerDoc("ParkyOpenAPISpec", 
+                    new Microsoft.OpenApi.Models.OpenApiInfo()
+                    {
+                        Title = "Parky API",
+                        Version = "1",
+                        Description = "Udemy Parky API",
+                        Contact = new Microsoft.OpenApi.Models.OpenApiContact()
+                        {
+                            Email = "mine@mine.com",
+                            Name = "Victor",
+                            Url = new Uri("https://www.google.com")
+                        },
+                        License = new Microsoft.OpenApi.Models.OpenApiLicense()
+                        {
+                            Name = " MIT License",
+                            Url = new Uri("Https://en.wikipedia.iorg/wiki/MIT_License")
+                        }
+                    });
+                var xmlCommentFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var cmlCommentsFullPath = Path.Combine(AppContext.BaseDirectory, xmlCommentFile);
+                options.IncludeXmlComments(cmlCommentsFullPath);
+            });
             services.AddControllers();
         }
 
@@ -54,6 +80,14 @@ namespace ParkyAPI
             }
 
             app.UseHttpsRedirection();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(options =>
+            {
+                options.SwaggerEndpoint("/swagger/ParkyOpenAPISpec/swagger.json", "Parky API"); 
+                options.RoutePrefix = "";
+            });
 
             app.UseRouting();
 

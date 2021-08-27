@@ -65,3 +65,9 @@ D:\documents\Learning\RestFulAPI\current\Parky\ParkyAPI\obj\Debug\netcoreapp3.1\
 D:\documents\Learning\RestFulAPI\current\Parky\ParkyAPI\obj\Debug\netcoreapp3.1\ParkyAPI.pdb
 D:\documents\Learning\RestFulAPI\current\Parky\ParkyAPI\obj\Debug\netcoreapp3.1\ParkyAPI.genruntimeconfig.cache
 D:\documents\Learning\RestFulAPI\current\Parky\ParkyAPI\obj\Debug\netcoreapp3.1\ParkyAPI.csprojAssemblyReference.cache
+D:\documents\Learning\RestFulAPI\current\Parky\ParkyAPI\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+D:\documents\Learning\RestFulAPI\current\Parky\ParkyAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\documents\Learning\RestFulAPI\current\Parky\ParkyAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\documents\Learning\RestFulAPI\current\Parky\ParkyAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\documents\Learning\RestFulAPI\current\Parky\ParkyAPI\obj\Debug\netcoreapp3.1\ParkyAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\documents\Learning\RestFulAPI\current\Parky\ParkyAPI\bin\Debug\netcoreapp3.1\ParkyAPI.xml

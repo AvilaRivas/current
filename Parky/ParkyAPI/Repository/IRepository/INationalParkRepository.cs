@@ -1,11 +1,10 @@
-﻿using ParkyAPI.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace ParkyAPI.Repository.INationalParkRepository
+namespace ParkyAPI.Repository.IRepository
 {
     public interface INationalParkRepository<T> : IBaseRepository<T>
     {

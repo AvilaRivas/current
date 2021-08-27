@@ -1,6 +1,7 @@
 ﻿using Autofac;
+using ParkyAPI.Data;
 using ParkyAPI.Repository;
-using ParkyAPI.Repository.INationalParkRepository;
+using ParkyAPI.Repository.IRepository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,9 @@ namespace ParkyAPI.Autofac
         {
             //base.Load(builder);
             //builder.RegisterType(typeof(BaseRepository<>)).As(typeof(IBaseRepository<>));
+            builder.RegisterType<ApplicationDbContext>().As<IApplicationDbContext>();
             builder.RegisterGeneric(typeof(NationalParkRepository<>)).As(typeof(INationalParkRepository<>));
+            builder.RegisterGeneric(typeof(TrailRepository<>)).As(typeof(ITrailRepository<>));
         }
     }
 }

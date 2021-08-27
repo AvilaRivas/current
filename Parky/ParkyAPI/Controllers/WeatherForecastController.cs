@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Logging;
 using ParkyAPI.Models;
 using ParkyAPI.Repository;
-using ParkyAPI.Repository.INationalParkRepository;
+using ParkyAPI.Repository.IRepository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +23,6 @@ namespace ParkyAPI.Controllers
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<WeatherForecastController> _logger;
 
 
         [HttpGet]

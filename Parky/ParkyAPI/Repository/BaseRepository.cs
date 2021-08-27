@@ -1,5 +1,5 @@
 ﻿using ParkyAPI.Data;
-using ParkyAPI.Repository.INationalParkRepository;
+using ParkyAPI.Repository.IRepository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,12 +17,12 @@ namespace ParkyAPI.Repository
             _db = db;
         }
 
-        public IEnumerable<T> GetNatiolanParks()
+        public IEnumerable<T> GetAll()
         {
             return this._db.Set<T>().ToList();
         }
 
-        public T GetNationalPark(int nationalParkId)
+        public T Get(int nationalParkId)
         {
             return this._db.Set<T>().Find(nationalParkId);
         }
@@ -31,19 +31,19 @@ namespace ParkyAPI.Repository
         {
             return this._db.Set<T>().Where(expression);
         }
-        public bool CreateNationalPark(T nationalPark)
+        public bool Create(T nationalPark)
         {
             this._db.Set<T>().Add(nationalPark);
             return Save();
         }
 
-        public bool UpdateNationalPark(T nationalPark)
+        public bool Update(T nationalPark)
         {
             this._db.Set<T>().Update(nationalPark);
             return Save();
         }
 
-        public bool DeleteNationalPark(T nationalPark)
+        public bool Delete(T nationalPark)
         {
             this._db.Set<T>().Remove(nationalPark);
             return Save();
