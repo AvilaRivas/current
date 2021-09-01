@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using ParkyAPI.Data;
 using ParkyAPI.Repository;
 using ParkyAPI.Repository.IRepository;
@@ -18,6 +19,8 @@ namespace ParkyAPI.Autofac
             builder.RegisterType<ApplicationDbContext>().As<IApplicationDbContext>();
             builder.RegisterGeneric(typeof(NationalParkRepository<>)).As(typeof(INationalParkRepository<>));
             builder.RegisterGeneric(typeof(TrailRepository<>)).As(typeof(ITrailRepository<>));
+            //Versioning
+            //builder.RegisterType<ApiVersionDescriptionProvider>().As<IApiVersionDescriptionProvider>();
         }
     }
 }

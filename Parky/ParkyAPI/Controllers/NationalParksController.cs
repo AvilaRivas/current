@@ -11,8 +11,10 @@ using System.Threading.Tasks;
 
 namespace ParkyAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/nationalparks")]
+    //[Route("api/[controller]")]
     [ApiController]
+    //[ApiExplorerSettings(GroupName = "ParkyOpenAPISpecNP")]
     public class NationalParksController : Controller
     {
         private INationalParkRepository<NationalPark> _npRepo;
@@ -77,7 +79,8 @@ namespace ParkyAPI.Controllers
                 ModelState.AddModelError("", $"Something went wrong when saving the record {nationalPark.Id}");
                 return StatusCode(500, ModelState);
             }
-            return CreatedAtRoute("GetNationalPark", new { nationalParkId = nationalPark.Id }, nationalPark);
+            return CreatedAtRoute("GetNationalPark", new { version=HttpContext.GetRequestedApiVersion().ToString(),
+                nationalParkId = nationalPark.Id }, nationalPark);
             //Esta forma es mas sencilla y me guysta mas
             //return Ok(nationalPark);
         }

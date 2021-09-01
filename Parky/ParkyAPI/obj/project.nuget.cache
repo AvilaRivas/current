@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "S1y8mWKRT6SQCwVwIf0p4tZXPKcZD5/LIqEZNf8WhoOl5Cuy3dpqHcEOprnAZDSBl3SCBQJqrxJ9YXxpUeOMJA==",
+  "dgSpecHash": "omHWzTvpA5W8dFePXNWfmVtyFyvzXYWoikCzxN/RAKnCGcCg+1WDpgVVdcvPncrZ4yUxznxNkybpOIVDkFg2RQ==",
   "success": true,
   "projectFilePath": "D:\\documents\\Learning\\RestFulAPI\\current\\Parky\\ParkyAPI\\ParkyAPI.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,8 @@
     "C:\\Users\\santo\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\santo\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "C:\\Users\\santo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\santo\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
+    "C:\\Users\\santo\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning.apiexplorer\\5.0.0\\microsoft.aspnetcore.mvc.versioning.apiexplorer.5.0.0.nupkg.sha512",
     "C:\\Users\\santo\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\santo\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\santo\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",

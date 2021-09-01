@@ -12,8 +12,10 @@ using System.Threading.Tasks;
 
 namespace ParkyAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/trails")]
+    //[Route("api/[controller]")]
     [ApiController]
+    //[ApiExplorerSettings(GroupName = "ParkyOpenAPISpecTrails")]
     public class TrailsController : Controller
     {
         private readonly ITrailRepository<Trail> _npRepo;
