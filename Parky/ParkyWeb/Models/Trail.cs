@@ -8,6 +8,7 @@ namespace ParkyWeb.Models
 {
     public class Trail
     {
+        public int Id { get; set; }
         [Required]
         public string Name { get; set; }
         [Required]
@@ -18,5 +19,6 @@ namespace ParkyWeb.Models
         [Required]
         public int NationalParkId { get; set; }
         public NationalPark NationalPark { get; set; }
+        public double Elevation { get; set; }
     }
 }

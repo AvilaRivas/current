@@ -8,7 +8,7 @@ using static ParkyAPI.Models.Trail;
 
 namespace ParkyAPI.Models.Dtos
 {
-    public class TrailDtoWithRelations : TrailDtoBase
+    public class TrailDtoWithRelations : TrailDtoUpdate
     {
         public NationalParkDto NationalPark { get; set; }
     }
