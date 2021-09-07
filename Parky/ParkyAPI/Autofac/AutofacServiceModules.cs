@@ -19,6 +19,7 @@ namespace ParkyAPI.Autofac
             builder.RegisterType<ApplicationDbContext>().As<IApplicationDbContext>();
             builder.RegisterGeneric(typeof(NationalParkRepository<>)).As(typeof(INationalParkRepository<>));
             builder.RegisterGeneric(typeof(TrailRepository<>)).As(typeof(ITrailRepository<>));
+            builder.RegisterGeneric(typeof(UserRepository<>)).As(typeof(IUserRepository<>));
             //Versioning
             //builder.RegisterType<ApiVersionDescriptionProvider>().As<IApiVersionDescriptionProvider>();
         }

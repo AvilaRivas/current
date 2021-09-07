@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ParkyAPI.Models;
@@ -15,7 +16,7 @@ namespace ParkyAPI.Controllers
     //[Route("api/[controller]")]
     [ApiController]
     //[ApiExplorerSettings(GroupName = "ParkyOpenAPISpecNP")]
-    public class NationalParksController : Controller
+    public class NationalParksController : ControllerBase
     {
         private INationalParkRepository<NationalPark> _npRepo;
         private readonly IMapper _mapper;
@@ -50,6 +51,7 @@ namespace ParkyAPI.Controllers
         [ProducesResponseType(200, Type = typeof(NationalParkDto))]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
+        [Authorize]
         [ProducesDefaultResponseType]
         public IActionResult GetNationalPark(int nationalParkId)
         {

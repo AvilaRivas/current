@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "omHWzTvpA5W8dFePXNWfmVtyFyvzXYWoikCzxN/RAKnCGcCg+1WDpgVVdcvPncrZ4yUxznxNkybpOIVDkFg2RQ==",
+  "dgSpecHash": "aLBwFpiq+W5bO9KAI/4NIFzcqYI7l1JRNpEpsfzY/9Fex+VIO51VgSSfFMS0+ChDPC3U0GWaGljTUiZBNYqLmQ==",
   "success": true,
   "projectFilePath": "D:\\documents\\Learning\\RestFulAPI\\current\\Parky\\ParkyAPI\\ParkyAPI.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\santo\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\santo\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "C:\\Users\\santo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\santo\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.18\\microsoft.aspnetcore.authentication.jwtbearer.3.1.18.nupkg.sha512",
     "C:\\Users\\santo\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
     "C:\\Users\\santo\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning.apiexplorer\\5.0.0\\microsoft.aspnetcore.mvc.versioning.apiexplorer.5.0.0.nupkg.sha512",
     "C:\\Users\\santo\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
