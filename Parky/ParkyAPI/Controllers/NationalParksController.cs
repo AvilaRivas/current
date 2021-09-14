@@ -15,6 +15,7 @@ namespace ParkyAPI.Controllers
     [Route("api/v{version:apiVersion}/nationalparks")]
     //[Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     //[ApiExplorerSettings(GroupName = "ParkyOpenAPISpecNP")]
     public class NationalParksController : ControllerBase
     {
@@ -105,6 +106,7 @@ namespace ParkyAPI.Controllers
         }
 
         [HttpDelete("{nationalParkId:int}", Name = "UpdateNationalPark")]
+        [Authorize(Roles ="Admin")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status409Conflict)]
